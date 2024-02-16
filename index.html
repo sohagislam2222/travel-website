@@ -11,18 +11,19 @@
 
 <body>
   <nav>
-    <div class="logo-container">
-      <img class="logo" src="./images/logo.png" alt="" />
-    </div>
-    <div class="profile">
-      <div class="cart-icon-container">
-        <img id="menu-cart" src="./images/cart.png" alt="" />
-        <h2 id="cart-count">0</h2>
+    <div class="nav-container">
+      <div class="logo-container">
+        <img class="logo" src="./images/logo.png" alt="" />
+        <div class="cart-count">
+          <img class="menu-cart" src="./images/cart.png" />
+          <h2 id="cart-count">0</h2>
+        </div>
+        <h3>HOME</h3>
+        <h3>SETTING</h3>
+        <img class="profile-logo" src="./images/man.png" alt="" />
       </div>
-      <li>Home</li>
-      <li>Setting</li>
-      <img class="profile-logo" src="./images/man.png" alt="" />
     </div>
+
   </nav>
   <main>
     <!-- banner section -->
@@ -47,59 +48,84 @@
     <section class="content-area-cotainer">
       <div class="left-content">
         <div class="palce">
-          <img class="place-img" src="./images/shajek.jpg" alt="" />
-          <div>
-            <h2>Shajek</h2>
-            <h4>Cost: <span class="price">300</span> $</h4>
-            <button class="add-btn">Add to Cart</button>
+          <div class="place-content">
+            <div class="place-img1">
+              <img class="place-img" src="./images/shajek.jpg" alt="" />
+            </div>
+            <div class="place-right">
+
+              <h2>Shajek</h2>
+              <h4>Cost: <span class="price">300</span> $</h4>
+              <button class="add-btn">Add to Cart</button>
+            </div>
           </div>
         </div>
         <div class="palce">
-          <img class="place-img" src="./images/Dhaka.jpg" alt="" />
-          <div>
-            <h2>Dhaka</h2>
-            <h4>Cost: <span class="price">300</span> $</h4>
-            <button class="add-btn">Add to Cart</button>
+          <div class="place-content">
+            <div class="place-img1">
+              <img class="place-img" src="./images/Dhaka.jpg" alt="" />
+
+            </div>
+            <div class="place-right">
+
+              <h2>Dhaka</h2>
+              <h4>Cost: <span class="price">300</span> $</h4>
+              <button class="add-btn">Add to Cart</button>
+            </div>
           </div>
         </div>
         <div class="palce">
-          <img class="place-img" src="./images/shundar-ban.jpg" alt="" />
-          <div>
-            <h2>Khulna</h2>
-            <h4>Cost: <span class="price">500</span> $</h4>
-            <button class="add-btn">Add to Cart</button>
+          <div class="place-content">
+            <div class="place-img1">
+              <img class="place-img" src="./images/shundar-ban.jpg" alt="" />
+            </div>
+            <div class="place-right">
+
+              <h2>Khulna</h2>
+              <h4>Cost: <span class="price">500</span> $</h4>
+              <button class="add-btn">Add to Cart</button>
+            </div>
           </div>
         </div>
         <div class="palce">
-          <img class="place-img" src="./images/coxBazar.jpg" alt="" />
-          <div>
-            <h2>Cox Bazar</h2>
-            <h4>Cost: <span class="price">500</span> $</h4>
-            <button class="add-btn">Add to Cart</button>
+          <div class="place-content">
+            <div class="place-img1">
+              <img class="place-img" src="./images/coxBazar.jpg" alt="" />
+            </div>
+            <div class="place-right">
+
+              <h2>Cox Bazar</h2>
+              <h4>Cost: <span class="price">500</span> $</h4>
+              <button class="add-btn">Add to Cart</button>
+            </div>
           </div>
         </div>
       </div>
+
+
       <div id="cart-container" class="cart">
-        <h1>Cart</h1>
-        <hr />
-        <ul id="selected-place-container" class="selected-place-container"></ul>
-        <hr />
-        <div class="calculation-area">
-          <h4>Total cost: <span id="total-cost">0</span> $</h4>
+        <div class="carts-content">
+          <h1>Cart</h1>
+          <hr class="hr1" />
+          <ul id="selected-place-container" class="selected-place-container"></ul>
+          <hr class="hr1" />
+          <div class="calculation-area">
+            <h4 class="total-cost">Total cost: <span id="total-cost">0</span> $</h4>
+          </div>
+          <div class="all-cat-btn">
+            <button onclick="grandTotalBus()" id="bus-btn" class="category-btn">
+              Bus +100
+            </button>
+            <button onclick="grandTotalTrain()" id="train-btn" class="category-btn">
+              Train -200
+            </button>
+            <button onclick="grandTotalFlight()" id="flight-btn" class="category-btn">
+              Flight +500
+            </button>
+          </div>
+          <hr class="hr1" />
+          <h4>Grand Total : <span id="grand-total">0</span> $</h4>
         </div>
-        <div class="all-cat-btn">
-          <button onclick="grandTotalBus()" id="bus-btn" class="category-btn">
-            Bus +100
-          </button>
-          <button onclick="grandTotalTrain()" id="train-btn" class="category-btn">
-            Train -200
-          </button>
-          <button onclick="grandTotalFlight()" id="flight-btn" class="category-btn">
-            Flight +500
-          </button>
-        </div>
-        <hr />
-        <h4>Grand Total : <span id="grand-total">0</span> $</h4>
       </div>
     </section>
   </main>

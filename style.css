@@ -2,17 +2,24 @@
     margin: 0px;
     padding: 0px;
 }
+
+body{
+    max-width: 1420px;
+    width: 100%;
+    margin: auto;
+}
+
 .banner-img{
     width: 100%;
 }
 .banner-container{
     width: 80%;
-    margin: auto;
+   margin: auto;
     /* border: 1px solid gray; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-padding: 30px;
+   padding: 30px;
 }
 .banner-left{
     width:50%;
@@ -27,60 +34,100 @@ padding: 30px;
    margin-bottom: 10px;
 }
 nav{
+ width: 100%;
+ background-color: cadetblue;
+}
+.nav-container{
+   width: 80%;
+    margin: auto;
+}
+
+.logo-container{
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(205, 205, 205);
+    width: 100%;    
 }
 .logo{
-    width: 100px;
-}
-.profile{
-    display: flex;
-    list-style: none;
-    gap: 10px;
-    font-size: 20px;
-    align-items: center;
-}
-.profile-logo{
     width: 50px;
     height: 50px;
-    border: 1px solid gray;
-    border-radius:50px;
-    padding: 10px;
 }
+.cart-count{
+    display: flex;
+    align-items: center;
+    
+}
+
+.profile-logo{
+     width: 50px;
+    height: 50px;
+}
+
+
 .content-area-cotainer{
+    width: 80%;
+    margin: 0px auto;
     margin-top: 30px;
     /* border: 1px solid rgb(247, 18, 18); */
-    padding: 10px;
     display: flex;
     justify-content: space-between;
 
 }
 .left-content{
-    /* border: 1px solid gray; */
-    width: 1000px !important;
+   width:80% ;
+   margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
 }
-.cart-container{
-    /* border: 1px solid rgb(88, 25, 235); */
-    width:400px;
-}
-.place-img{
-    width: 150px;
-    border-radius: 10px;
-}
+
 .palce{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-    /* border: 1px solid #ccc; */
-    width: 270px;
+    width: 70%;
+    border: 1px solid #ccc;
     box-shadow: 4px 4px 8px gray;
     border-radius:5px;
+    margin: auto;
 }
+.place-content{
+    width: 90%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: auto;
+   gap: 50px;
+}
+#cart-container{
+    /* border: 1px solid rgb(88, 25, 235); */
+    width:25%;
+}
+.hr1{
+    margin: 20px 0px;
+}
+
+.carts-content{
+    padding: 15px;
+}
+
+
+.total-cost{
+    margin: 20px 0px;
+}
+.place-img1{
+      padding: 10px 0px;
+
+width: 70%;
+
+}
+.place-right{
+    width: 30%;
+}
+.place-img{
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+}
+
 .add-btn{
     width: 90px;
     padding: 7px;
@@ -98,46 +145,96 @@ nav{
     text-align: center;
     padding:10px;
 }
-.cart-icon-container{
-    position: absolute;
 
+
+.menu-cart{
+    padding-right: 20px;
+    width: 50px;
+    height: 50px;
 }
-#menu-cart{
-    border: none !important;
-    width: 30px;
-    box-shadow: none;
-    position: absolute;
-   right: 23px;
-  bottom: 1.5px;
-}
+
 #cart-count{
     position: relative;
-   right: 44px;
+   right: 20px;
   z-index: 1;
   bottom: 15px;
 color: rgb(235, 17, 17);
 }
+
 .category-btn{
+
     padding: 8px;
-border: none;
-background-color: rgb(135, 134, 133);
-color: white;
-font-size:15px;
+    border: none;
+    background-color: rgb(135, 134, 133);
+    color: white;
+    font-size:  15px;
+    border-radius: 10px;
 }
 .all-cat-btn{
-    padding: 10px;
+    display: flex;
+flex-wrap: wrap;
+gap: 20px;
+
 }
 li{
-    display: flex;
     gap: 20px;
     width: 200px;
     margin: auto;
-    text-align: center;
-    list-style: numeric;
+    text-align: left;
+   list-style: none;
     
 }
 .selected-place-container{
     width:200px;
     margin: auto;
     
+}
+
+@media  screen and (max-width:600px)  {
+    .content-area-cotainer{
+        flex-direction: column;
+    }
+
+
+
+.left-content{
+   
+    width:100% !important;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.place-img{
+    width: 80%;
+    border-radius: 10px;
+    height: 200px;
+}
+.palce{
+  
+    width: 100%;
+    
+}
+#cart-container{
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+nav{
+    padding: 10px !important;
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(205, 205, 205);
+}
+.logo{
+    width: 10px;
+}
+.place-content{
+    gap: 10px;
+}
+
 }
