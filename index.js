@@ -54,7 +54,9 @@ function getElementById1(elementId) {
   return element;
 }
 
-
+let btn1 = getElementById1('bus-btn');
+let btn2 = getElementById1('train-btn');
+let btn3 = getElementById1('flight-btn');
 function grandTotalBus() {
   const totalCost = getElementById('total-cost');
   const totalCost1 = parseFloat(totalCost);
@@ -68,11 +70,15 @@ function grandTotalBus() {
     const grandTotal1 = parseFloat(grandTotal);
     const newTotal = totalCost1 + 100;
     setElementById('grand-total', newTotal);
-    const btn = getElementById1('bus-btn');
-    console.log(btn)
-    btn.style.backgroundColor = 'blue';
+    btn1 = getElementById1('bus-btn');
+
+    btn1.style.backgroundColor = 'blue';
+    btn2.style.backgroundColor = 'gray';
+    btn3.style.backgroundColor = 'gray';
+
   }
 }
+
 
 
 function grandTotalTrain() {
@@ -87,9 +93,10 @@ function grandTotalTrain() {
     const grandTotal1 = parseFloat(grandTotal);
     const newTotal = totalCost1 - 200;
     setElementById('grand-total', newTotal);
-    const btn = getElementById1('train-btn');
-    console.log(btn)
-    btn.style.backgroundColor = 'blue';
+    btn2 = getElementById1('train-btn');
+    btn1.style.backgroundColor = 'gray';
+    btn2.style.backgroundColor = 'blue';
+    btn3.style.backgroundColor = 'gray';
   }
 }
 
@@ -107,9 +114,13 @@ function grandTotalFlight() {
     const newTotal = totalCost1 + 500;
     setElementById('grand-total', newTotal);
     const btn = getElementById1('flight-btn');
-    console.log(btn)
-    btn.style.backgroundColor = 'blue';
+    btn1.style.backgroundColor = 'gray';
+    btn2.style.backgroundColor = 'gray';
+    btn3.style.backgroundColor = 'blue';
   }
 
 
 }
+
+
+
